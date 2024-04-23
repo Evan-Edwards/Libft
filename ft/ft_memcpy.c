@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 #include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	void	*start;
 
-	start = dest;
-	if (!dest && !src)
-		return (dest);
+	start = dst;
+	if (!dst && !src)
+		return (dst);
 	while (n--)
-		*(unsigned char *)dest++ = *(unsigned char *)src++;
+		*(unsigned char *)dst++ = *(unsigned char *)src++;
 	return (start);
 }
 /*
@@ -29,8 +29,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	const char src[50] = "Hello";
-	char dest[50];
-	ft_memcpy(dest, src, strlen(src) + 1);
-	printf("%s\n", dest);
+	char dst[50];
+	ft_memcpy(dst, src, strlen(src) + 1);
+	printf("%s\n", dst);
 }
 */

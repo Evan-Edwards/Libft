@@ -9,9 +9,9 @@
 /*   Updated: 2024/01/17 16:12:08 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	count;
@@ -20,12 +20,12 @@ unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
 	count = 0;
 	while (src[count])
 		count ++;
-	while (i < size - 1 && src[i])
+	while (i < dstsize - 1 && src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (count);
 }
 /*
