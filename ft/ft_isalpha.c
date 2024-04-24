@@ -16,3 +16,6 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+/*returns a non-zero value if the character passed as an int parameter is an 
+alphabetical letter (lowercase or uppercase). If the character is not 
+alphabetical, the isalpha() function returns 0.*/

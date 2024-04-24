@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		return (dst);
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	if (d > s)
+	if (d > s && d < s + n)
 	{
 		while (n--)
 			d[n] = s[n];
@@ -28,9 +28,13 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	else
 	{
 		while (n--)
-			d++ = s++;
+		{
+			*d = *s;
+			d++;
+			s++;
+		}
 	}
 	return (dst);
 }
-// The memmove() function copies len bytes from string src to string dst.
+// The memmove() function copies n bytes from string src to string dst.
 // The two strings may overlap; the copy is always done in a non-destructive

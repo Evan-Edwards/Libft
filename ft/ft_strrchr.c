@@ -19,10 +19,16 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-			res = s;
+			res = (char *)s;
 		s++;
 	}
 	if (*s == (char)c)
-		res = s;
+		res = (char *)s;
 	return (res);
 }
+
+/* scans the string s for the last occurrence of the character c. The scanning 
+includes the terminating null character, so the function can also be used to 
+locate the end of a string. The pointer res is updated every time the character 
+c is found, and finally points to the last occurrence of c or remains NULL if c
+is not found. If c is the null character, strrchr locates the terminating \0.*/

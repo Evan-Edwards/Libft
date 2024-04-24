@@ -20,6 +20,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	count = 0;
 	while (src[count])
 		count ++;
+	if (dstsize == 0)
+		return (count);
 	while (i < dstsize - 1 && src[i])
 	{
 		dst[i] = src[i];
@@ -28,6 +30,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (count);
 }
+/* Copies one string to another and always NUL-terminates the string. Always
+returns the length of the string that it tried to create (length of src)*/
 /*
 #include <stdio.h>
 
