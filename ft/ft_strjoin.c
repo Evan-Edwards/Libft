@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 15:20:50 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/18 15:50:11 by eedwards         ###   ########.fr       */
+/*   Created: 2024/04/24 16:04:19 by eedwards          #+#    #+#             */
+/*   Updated: 2024/04/24 16:04:27 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	sign;
-	int	result;
+	char	*s3;
+	size_t	i;
+	size_t	j;
 
-	sign = 1;
-	while ((*str > 8 && *str < 14) || *str == 32)
-		str++;
-	while (*str == '-' || *str == '+')
+	i = 0;
+	j = 0;
+	s3 = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!s3)
+		return (NULL);
+	while (s1[i])
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
+		s3[i] = s1[i];
+		i++;
 	}
-	while (*str >= '0' && *str <= '9' && *str)
+	while (s2[j])
 	{
-		result = result * 10 + (*str - '0');
-		str++;
+		s3[i + j] = s2[j];
+		j++;
 	}
-	return (result * sign);
+	s3[i + j] = '\0';
+	return (s3);
 }

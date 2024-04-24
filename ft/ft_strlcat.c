@@ -33,8 +33,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 
 /* Appends the src string to the dst string overwriting the terminating
-null byte ('\0') at the end of dst, and then adds a terminating null byte. The 
-strings may not overlap, and the dst string must have enough space for the result. 
-If dstsize is greater than dst_len, it appends as many characters from the src 
-string as it can, and null-terminates the result. If the src and dst strings 
-overlap, the behavior is undefined.*/
+null byte ('\0') at the end of dst, and then adds a terminating null byte. The
+strings may not overlap, and the dst string must have enough space for the
+result. If dstsize is greater than dst_len, it appends as many characters from
+the src string as it can, and null-terminates the result. If the src and dst
+strings overlap, the behavior is undefined.*/
