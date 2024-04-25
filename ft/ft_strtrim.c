@@ -11,20 +11,18 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	to_trim(const char *set, char c)
 {
-	int	start;
-	int	end;
+	int	i;
 
-	start = 0;
-	end = ft_strlen(s1) - 1;
-	if (ft_strlen(s1) == 0)
-		return (ft_strdup(""));
-	while (to_trim(set, s1[start]))
-		start++;
-	while (to_trim(set, s1[end]))
-		end--;
-	return (new_str(s1, start, end - (start - 1)));
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
 static char	*new_str(const char *s1, size_t start, size_t len)
@@ -47,16 +45,18 @@ static char	*new_str(const char *s1, size_t start, size_t len)
 	return (res);
 }
 
-static int	to_trim(const char *set, char c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
+	int	start;
+	int	end;
 
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
+	while (to_trim(set, s1[start]))
+		start++;
+	while (to_trim(set, s1[end]))
+		end--;
+	return (new_str(s1, start, end - (start - 1)));
 }

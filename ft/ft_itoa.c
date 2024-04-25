@@ -1,34 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 16:32:08 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/24 16:31:15 by eedwards         ###   ########.fr       */
+/*   Created: 2024/04/25 15:42:14 by eedwards          #+#    #+#             */
+/*   Updated: 2024/04/25 16:31:46 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+static int	num_len(int n)
 {
-	char	*sub;
-	size_t	i;
+	int	len;
 
-	i = 0;
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
-	sub = (char *)malloc(len + 1);
-	if (!sub)
-		return (NULL);
-	while (i < len && s[start])
+	len = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
 	{
-		sub[i] = s[start];
-		i++;
-		start++;
+		n *= -1;
+		len++;
 	}
-	sub[i] = '\0';
-	return (sub);
+	while (n > 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
 }
-/*ft_substr returns a substring of the string s passed as parameter.*/
+
+char	*ft_itoa(int n)
+{
+	int		j;
+	char	*num;
+
+	j = num_len(n);
+	num = malloc(j + 1);
+	if (!num)
+		return (NULL);
+	num[j] = '\0';
+	j--;
+	if (n == 0)
+		num[0] = '0';
+	if (n < 0)
+	{
+		num[0] = '-';
+		n *= -1;
+	}
+	while (n > 0)
+	{
+		num[j] = (n % 10) + 48;
+		n /= 10;
+		j--;
+	}
+	return (num);
+}

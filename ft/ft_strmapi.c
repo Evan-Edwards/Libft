@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 16:32:08 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/24 16:31:15 by eedwards         ###   ########.fr       */
+/*   Created: 2024/04/25 17:04:43 by eedwards          #+#    #+#             */
+/*   Updated: 2024/04/25 17:04:46 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*sub;
-	size_t	i;
+	char *res;
+	unsigned int i;
 
-	i = 0;
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
-	sub = (char *)malloc(len + 1);
-	if (!sub)
+	res = malloc(ft_strlen(s) + 1);
+	if (!res)
 		return (NULL);
-	while (i < len && s[start])
+	i = 0;
+	while (s[i])
 	{
-		sub[i] = s[start];
+		res[i] = (*f)(i, s[i]);
 		i++;
-		start++;
 	}
-	sub[i] = '\0';
-	return (sub);
+	res[i] = '\0';
+	return (res);
 }
-/*ft_substr returns a substring of the string s passed as parameter.*/
