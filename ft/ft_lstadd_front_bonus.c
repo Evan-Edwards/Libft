@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 17:46:41 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/25 17:47:33 by eedwards         ###   ########.fr       */
+/*   Created: 2024/04/26 12:26:54 by eedwards          #+#    #+#             */
+/*   Updated: 2024/04/26 12:27:05 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
