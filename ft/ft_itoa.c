@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	num_len(int n)
+static int	num_len(long n)
 {
 	int	len;
 
@@ -35,8 +35,10 @@ char	*ft_itoa(int n)
 {
 	int		j;
 	char	*num;
+	long	nbr;
 
-	j = num_len(n);
+	nbr = (long)n;
+	j = num_len(nbr);
 	num = malloc(j + 1);
 	if (!num)
 		return (NULL);
