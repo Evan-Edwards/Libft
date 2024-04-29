@@ -16,19 +16,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	cc;
 	unsigned char	*str;
 
-	cc = c;
-	str = (unsigned char *) s;
-	while (*str && n != 0)
+	cc = (unsigned char)c;
+	str = (unsigned char *)s;
+	while (n--)
 	{
 		if (*str == cc)
 			return ((void *)str);
 		str++;
-		n--;
 	}
-	if (cc == '\0')
-		return ((void *)str);
 	return (NULL);
 }
-/* the memchr() function locates the first occurence of c (convered to an 
-unsigned char) in string s. The n parameter tells how many bytes we want to 
+/* the memchr() function locates the first occurence of c (convered to an
+unsigned char) in string s. The n parameter tells how many bytes we want to
 search in (necessary because there's no terminating character)*/

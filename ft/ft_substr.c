@@ -15,10 +15,14 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
+	size_t	s_len;
 
 	i = 0;
-	if (start > ft_strlen(s))
+	s_len = ft_strlen(s);
+	if (start > s_len)
 		return (ft_strdup(""));
+	if (s_len - start < len)
+		len = s_len - start;
 	sub = (char *)malloc(len + 1);
 	if (!sub)
 		return (NULL);

@@ -44,17 +44,17 @@ char	*ft_itoa(int n)
 		return (NULL);
 	num[j] = '\0';
 	j--;
-	if (n == 0)
+	if (nbr == 0)
 		num[0] = '0';
-	if (n < 0)
+	if (nbr < 0)
 	{
 		num[0] = '-';
-		n *= -1;
+		nbr *= -1;
 	}
-	while (n > 0)
+	while (nbr > 0)
 	{
-		num[j] = (n % 10) + 48;
-		n /= 10;
+		num[j] = (nbr % 10) + 48;
+		nbr /= 10;
 		j--;
 	}
 	return (num);
