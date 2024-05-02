@@ -17,3 +17,5 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*The isalnum() function returns a non-zero value if the character passed as 
+an int parameter is alphabetical or a decimal digit character.*/

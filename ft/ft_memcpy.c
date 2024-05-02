@@ -22,15 +22,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*(unsigned char *)dst++ = *(unsigned char *)src++;
 	return (start);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	const char src[50] = "Hello";
-	char dst[50];
-	ft_memcpy(dst, src, strlen(src) + 1);
-	printf("%s\n", dst);
-}
-*/
+/*The memcpy() function copies n bytes from memory area src to memory area dst.
+If dstt and src overlap, behavior is undefined.*/

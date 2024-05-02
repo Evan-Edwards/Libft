@@ -16,3 +16,5 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+/*The isascii() function returns a non-zero value if the character passed as an
+int parameter is an ASCII character between 0 and decimal 127*/

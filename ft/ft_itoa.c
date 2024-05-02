@@ -59,3 +59,5 @@ char	*ft_itoa(int n)
 	}
 	return (num);
 }
+/*converts int to string. Allocates with malloc for string.
+Returns NULL if memory allocation failed*/

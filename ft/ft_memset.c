@@ -23,3 +23,5 @@ void	*ft_memset(void *str, int c, size_t len)
 	}
 	return (str);
 }
+/*The memset() function writes len bytes of value c (converted to an unsigned 
+char) to the string b.*/

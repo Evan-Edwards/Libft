@@ -21,3 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(tmp, size * count);
 	return (tmp);
 }
+/* If successful, calloc() returns a pointer to allocated memory. If there is 
+an error, they return a NULL pointer and set errno to ENOMEM (done by malloc)
+.*/

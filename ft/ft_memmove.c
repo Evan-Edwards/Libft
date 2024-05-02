@@ -36,5 +36,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-// The memmove() function copies n bytes from string src to string dst.
-// The two strings may overlap; the copy is always done in a non-destructive
+/* The memmove() function copies n bytes from string src to string dst.
+The two strings may overlap; the copy is always done in a non-destructive */

@@ -1,0 +1,4 @@
+char dst3[50] = "Hello";
+    char src3[50] = ", World!";
+    size_t res1 = ft_strlcat(dst3, src3, 7);
+    printf("Test 1 result: %s, Return value: %zu\n", dst3, res1);

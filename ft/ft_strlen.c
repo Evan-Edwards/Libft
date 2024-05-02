@@ -20,13 +20,4 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-	char	str[] = "Hello my name is Evan";
-
-	printf("The length of the string is %d\n", ft_strlen(str));
-}
-*/

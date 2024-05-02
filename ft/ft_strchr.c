@@ -23,3 +23,6 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+/*The strchr() function searches for one character in a string. If it finds the
+ character, it returns a pointer to the first occurence of this specific 
+ character.*/
