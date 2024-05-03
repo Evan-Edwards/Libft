@@ -32,21 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 }
 /* Copies one string to another and always NUL-terminates the string. Always
 returns the length of the string that it tried to create (length of src)*/
-/*
-#include <stdio.h>
-
-unsigned	int ft_strlcpy(char *dest, char *src, unsigned int size);
-
-int	main(void)
-{
-	char			*src;
-	char			dest[50];
-	unsigned int	size;
-
-	size = 7;
-	src = "Hellocanyouhearme";
-	size = ft_strlcpy(dest, src, size);
-	printf("size is %d\n", size);
-	printf("%s\n", dest);
-}
-*/

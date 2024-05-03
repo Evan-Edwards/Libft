@@ -34,23 +34,20 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-static void	*ft_free(char **arr, int words)
+static void	*ft_free(char **arr, int i)
 {
-	int	i;
-
-	i = 0;
-	while (i < words)
+	while (i > 0)
 	{
+		i--;
 		free(arr[i]);
-		i++;
 	}
 	free(arr);
 	return (NULL);
 }
 
-static int	word_len(char const *s, char c)
+static size_t	word_len(char const *s, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -60,9 +57,9 @@ static int	word_len(char const *s, char c)
 
 static char	**split(char const *s, char c, char **arr, int words)
 {
-	int	i;
-	int	j;
-	int	k;
+	int				i;
+	unsigned int	j;
+	unsigned int	k;
 
 	i = 0;
 	j = 0;
@@ -74,7 +71,7 @@ static char	**split(char const *s, char c, char **arr, int words)
 		arr[i] = ft_substr(s, j, word_len((s + j), c));
 		if (!arr[i])
 		{
-			ft_free(arr, words);
+			ft_free(arr, i);
 			return (NULL);
 		}
 		j += word_len((s + j), c);

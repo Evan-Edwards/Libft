@@ -26,6 +26,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/* the memchr() function locates the first occurence of c (convered to an
+/* the memchr() function locates the first occurence of c (converted to an
 unsigned char) in string s. The n parameter tells how many bytes we want to
 search in (necessary because there's no terminating character)*/

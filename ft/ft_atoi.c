@@ -33,3 +33,7 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+/*The atoi() function converts the initial portion of the string pointed 
+to by str to int representation. There may be whitespaces before and 
+one optional + or - sign. */

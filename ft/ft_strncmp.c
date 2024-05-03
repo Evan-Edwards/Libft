@@ -22,12 +22,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	const char *str1 = "Hello";
-	const char *str2 = "Hello5";
-	printf("Result is %i\n", ft_strncmp(str1, str2, 6));
-}
-*/

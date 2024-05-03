@@ -32,3 +32,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+/*searches through string and tries to find the needle string, returns a
+pointer to where needle string starts. If needle not found NULL is returned.
+No more than len characters are searched*/

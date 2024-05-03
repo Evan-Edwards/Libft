@@ -35,3 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s3[i + j] = '\0';
 	return (s3);
 }
+
+/*makes space for new string which is the second string added to
+end of first string, terminated with NULL*/
