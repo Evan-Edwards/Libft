@@ -40,8 +40,6 @@ $(NAME): $(OBJS)
 bonus: $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $(OBJS) $(BOBJS)
 
-test:     
-	${CC} ${CFLAGS} main.c ${NAME} -o testermain
 clean:
 	$(RM) $(OBJS) $(BOBJS)
 

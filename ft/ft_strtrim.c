@@ -60,3 +60,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (new_str(s1, start, end - (start - 1)));
 }
+
+/*Removes all characters in the string set from the start and end of s1*/

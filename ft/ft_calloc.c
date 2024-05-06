@@ -15,12 +15,14 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*tmp;
 
+	if (count > 0 && size > 0 && count > SIZE_MAX / size)
+		return (NULL);
 	tmp = malloc(count * size);
 	if (!tmp)
 		return (NULL);
 	ft_bzero(tmp, size * count);
 	return (tmp);
 }
-/* If successful, calloc() returns a pointer to allocated memory. he allocated
-memory is filled with bytes of value zero. If there is an error, they return 
+/* If successful, calloc() returns a pointer to allocated memory. The allocated
+memory is filled with bytes of value zero. If there is an error, they return
 a NULL pointer and set errno to ENOMEM (done by malloc)*/

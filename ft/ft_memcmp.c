@@ -27,4 +27,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/* Compares byte strings (can take void pointers as )*/
+/* Compares byte strings (can take void pointers)*/
