@@ -9,12 +9,12 @@
 /*   Updated: 2024/04/18 15:50:11 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	result;
+	long	result;
+	long	check;
+	int		sign;
 
 	sign = 1;
 	result = 0;
@@ -28,12 +28,19 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9' && *str)
 	{
-		result = result * 10 + (*str - '0');
+		check = result;
+		result = result * 10 + *str - '0';
+		if (result / 10 != check && sign < 0)
+			return (0);
+		if (result / 10 != check && sign > 0)
+			return (-1);
 		str++;
 	}
-	return (result * sign);
+	return ((int)(result * sign));
 }
 
-/*The atoi() function converts the initial portion of the string pointed 
-to by str to int representation. There may be whitespaces before and 
-one optional + or - sign. */
+/*The atoi() function converts the initial portion of the string pointed
+to by str to int representation. There may be whitespaces before and
+one optional + or - sign. The check is to check if it overflows the long
+range. If so result will not equal check and it will return 0 for negative
+numbers and -1 for positive numbers. */

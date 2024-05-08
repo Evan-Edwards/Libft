@@ -38,7 +38,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(BOBJS)
-	ar rcs $(NAME) $(OBJS) $(BOBJS)
+	@ar rcs $(NAME) $(OBJS) $(BOBJS)
 
 clean:
 	$(RM) $(OBJS) $(BOBJS)
