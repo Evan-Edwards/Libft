@@ -33,12 +33,14 @@ CFLAGS = -Wall -Wextra -Werror
 	$(CC) $(CFLAGS) -c $?
 
 all: $(NAME)
+bonus: .bonus
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BOBJS)
-	@ar rcs $(NAME) $(OBJS) $(BOBJS)
+.bonus: $(OBJS) $(BOBJS)
+	ar rcs $(NAME) $(OBJS) $(BOBJS)
+	@touch .bonus
 
 clean:
 	$(RM) $(OBJS) $(BOBJS)
