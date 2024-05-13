@@ -50,10 +50,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	start;
 	int	end;
 
+	if (!set || !s1)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	if (ft_strlen(s1) == 0)
-		return (ft_strdup(""));
 	while (to_trim(set, s1[start]))
 		start++;
 	while (to_trim(set, s1[end]))

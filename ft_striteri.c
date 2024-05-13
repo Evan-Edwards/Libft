@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 11:43:31 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/17 12:13:38 by eedwards         ###   ########.fr       */
+/*   Created: 2024/04/25 17:31:28 by eedwards          #+#    #+#             */
+/*   Updated: 2024/04/25 17:31:35 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	void	*start;
+	unsigned int	i;
 
-	start = dst;
-	if (!dst && !src)
-		return (dst);
-	while (n--)
-		*(unsigned char *)dst++ = *(unsigned char *)src++;
-	return (start);
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
-/*The memcpy() function copies n bytes from memory area src to memory area dst.
-If dstt and src overlap, behavior is undefined.*/

@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 16:04:19 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/24 16:04:27 by eedwards         ###   ########.fr       */
+/*   Created: 2024/04/26 11:32:11 by eedwards          #+#    #+#             */
+/*   Updated: 2024/04/26 11:32:26 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*s3;
-	size_t	i;
-	size_t	j;
+	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
-	j = 0;
-	s3 = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!s3)
-		return (NULL);
-	while (s1[i])
+	while (s[i])
 	{
-		s3[i] = s1[i];
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	while (s2[j])
-	{
-		s3[i + j] = s2[j];
-		j++;
-	}
-	s3[i + j] = '\0';
-	return (s3);
 }
-
-/*makes space for new string which is the second string added to
-end of first string, terminated with NULL*/
