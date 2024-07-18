@@ -5,10 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/24 11:47:10 by eedwards          #+#    #+#              #
-#    Updated: 2024/07/18 15:04:25 by eedwards         ###   ########.fr        #
+#    Created: Invalid date        by                   #+#    #+#              #
+#    Updated: 2024/07/18 15:13:00 by eedwards         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+
+
+
+
 
 NAME = libft.a
 
