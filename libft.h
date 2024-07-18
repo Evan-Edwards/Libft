@@ -6,7 +6,7 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 13:10:02 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/24 13:10:07 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/07/18 14:07:40 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include "gnl/get_next_line.h"
 
 typedef struct s_list
 {
@@ -33,6 +35,7 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
+int					ft_isspace(int c);
 
 /* ************************************************************************** */
 /*                                 MEMORY                                     */
@@ -93,5 +96,15 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
+
+/* ************************************************************************** */
+/*                                get_next_line                               */
+/* ************************************************************************** */
+
+char				*get_next_line(int fd);
+
+/* ************************************************************************** */
+/*                                get_next_line                               */
+/* ************************************************************************** */
 
 #endif
