@@ -6,7 +6,7 @@
 #    By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/20 15:23:06 by eedwards          #+#    #+#              #
-#    Updated: 2024/08/13 11:21:44 by eedwards         ###   ########.fr        #
+#    Updated: 2024/08/13 12:19:50 by eedwards         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ clean:
 
 fclean:
 	@$(RM) $(NAME) $(OBJS)
-	@echo "$(NAME) and object files removed"
+	@echo "$(NAME) removed
 
 re: fclean $(NAME)
 
