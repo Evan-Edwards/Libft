@@ -6,11 +6,11 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:11:37 by eedwards          #+#    #+#             */
-/*   Updated: 2024/08/28 12:24:01 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/08/28 12:27:13 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	unsigned int	i;
 
