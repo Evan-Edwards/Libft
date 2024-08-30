@@ -6,7 +6,7 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 13:10:02 by eedwards          #+#    #+#             */
-/*   Updated: 2024/08/28 12:27:05 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/08/30 12:16:51 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include "gnl/get_next_line.h"
-# include "ft_printf/ft_printf.h"
+# include "get_next_line.h"
+# include "ft_printf.h"
 
 typedef struct s_list
 {
