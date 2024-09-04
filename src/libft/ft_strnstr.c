@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:41:13 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/18 15:20:37 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:43:26 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

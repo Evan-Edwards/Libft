@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:45:31 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/18 13:01:17 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:43:23 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:33:09 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/29 13:13:36 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:42:44 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	num_len(long n)

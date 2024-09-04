@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:05:03 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/18 13:27:20 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:42:23 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

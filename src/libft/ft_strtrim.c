@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:26:06 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/25 12:26:29 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:43:32 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	to_trim(const char *set, char c)

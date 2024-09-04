@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:52:35 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/17 11:43:20 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:42:34 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t len)

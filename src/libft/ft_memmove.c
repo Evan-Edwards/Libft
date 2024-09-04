@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:59:51 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/17 13:59:55 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:42:31 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)

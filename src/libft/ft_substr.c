@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:32:08 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/24 16:31:15 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:43:35 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)

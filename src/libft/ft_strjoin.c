@@ -6,9 +6,10 @@
 /*   By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 16:04:19 by eedwards          #+#    #+#             */
-/*   Updated: 2024/04/24 16:04:27 by eedwards         ###   ########.fr       */
+/*   Updated: 2024/09/04 14:43:06 by eedwards         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

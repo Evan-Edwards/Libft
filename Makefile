@@ -6,17 +6,16 @@
 #    By: eedwards <eedwards@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: Invalid date        by                   #+#    #+#              #
-#    Updated: 2024/08/30 12:29:34 by eedwards         ###   ########.fr        #
+#    Updated: 2024/09/04 14:41:22 by eedwards         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = cc -g
+CC = cc -g -I./incl
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 MAKE_SILENT = make --no-print-directory
 
-# Libft sources
 LIBFT_SRCS = src/libft/ft_atoi.c src/libft/ft_bzero.c src/libft/ft_calloc.c \
 	src/libft/ft_isalnum.c src/libft/ft_isalpha.c src/libft/ft_isascii.c \
 	src/libft/ft_isdigit.c src/libft/ft_isprint.c src/libft/ft_isspace.c \
@@ -33,20 +32,17 @@ LIBFT_SRCS = src/libft/ft_atoi.c src/libft/ft_bzero.c src/libft/ft_calloc.c \
 	src/libft/ft_lstiter.c src/libft/ft_lstlast.c src/libft/ft_lstmap.c \
 	src/libft/ft_lstnew.c src/libft/ft_lstsize.c src/libft/ft_strcmp.c
 
-# Get Next Line sources
 GNL_SRCS = src/gnl/get_next_line_utils.c src/gnl/get_next_line.c
 
-# Ft_printf sources
 PRINTF_SRCS = src/ft_printf/ft_printf.c src/ft_printf/ft_putchar.c \
 	src/ft_printf/ft_putnbr_p.c src/ft_printf/ft_putnbr.c src/ft_printf/ft_putstr.c
 
-# All sources combined
 SRCS = $(LIBFT_SRCS) $(GNL_SRCS) $(PRINTF_SRCS)
 
 OBJS = $(SRCS:src/%.c=obj/%.o)
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $@
+obj/%.o: src/%.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 	
 all: $(NAME)
 
