@@ -7,7 +7,7 @@ This project involves creating a personal C library containing a collection of c
 Clone the repository and compile the library:
 
 ```bash
-git clone https://github.com/yourusername/libft.git
+git clone https://github.com/Evan-Edwards/libft.git
 cd libft
 make
 ```
